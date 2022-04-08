@@ -44,25 +44,28 @@ class _LoginPageState extends State<LoginPage> {
                 child: _circleLogin()
             ),
             Positioned(
-                child: _textLogin(),
+                child: _txtLogin(),
                 top: 60,
                 left: 25,
             ),
-            Column(
-              children: [
-                //método para invocar animación
-                _LottieAnimLogin(),
-                //Método para recuperar imagen
-                //_imgLogin(),
-                //Método para recuperar email
-                _txtFEmail(),
-                //Método para recuperar pw
-                _txtFPW(),
-                //Método para recuperar botón login
-                _btnLogin(),
-                //Método para recuperar register option
-                _txtAcc()
-              ],
+            //Para hacer scroll en la pantalla
+            SingleChildScrollView(
+              child: Column(
+                children: [
+                  //método para invocar animación
+                  _LottieAnimLogin(),
+                  //Método para recuperar imagen
+                  //_imgLogin(),
+                  //Método para recuperar email
+                  _txtFEmail(),
+                  //Método para recuperar pw
+                  _txtFPW(),
+                  //Método para recuperar botón login
+                  _btnLogin(),
+                  //Método para recuperar register option
+                  _txtAcc()
+                ],
+              ),
             ),
           ],
         ),
@@ -88,9 +91,8 @@ class _LoginPageState extends State<LoginPage> {
       ),
     );
   }
-
   //Widget texto login
-  Widget _textLogin(){
+  Widget _txtLogin(){
     //se retorna un texto
     return Text(
       'Login',
