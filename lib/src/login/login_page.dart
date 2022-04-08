@@ -143,7 +143,9 @@ class _LoginPageState extends State<LoginPage> {
       width: double.infinity,
       //agregar margen en los espacios horizontales y entre componentes
       margin: EdgeInsets.symmetric(horizontal: 50, vertical: 30),
-      child: ElevatedButton(onPressed: (){},
+      child: ElevatedButton(
+        //método login desde controlador
+        onPressed: _con.login,
           child: Text('Ingresar'),
           //estilos al botón
           style: ElevatedButton.styleFrom(
@@ -160,6 +162,7 @@ class _LoginPageState extends State<LoginPage> {
       ),
     );
   }
+
   //widget campo email
   Widget _txtFEmail(){
     return Container(
@@ -175,6 +178,10 @@ class _LoginPageState extends State<LoginPage> {
 
       ),
       child: TextField(
+        //para indicar que el manejador del texto será el emailController
+        controller: _con.emailCtrller,
+        //cambiar el tipo de teclado a correo
+        keyboardType: TextInputType.emailAddress,
         decoration: InputDecoration(
             hintText: 'Correo electrónico',
             //quitamos línea inferior
@@ -207,6 +214,9 @@ class _LoginPageState extends State<LoginPage> {
 
       ),
       child: TextField(
+        //para indicar que el manejador del texto será el pwController
+        controller: _con.pwCtrller,
+        obscureText: true,
         decoration: InputDecoration(
             hintText: 'Contraseña',
             //quitamos línea inferior
