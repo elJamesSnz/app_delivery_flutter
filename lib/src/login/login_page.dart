@@ -1,7 +1,9 @@
 import 'dart:ffi';
 
+import 'package:app_delivery_flutter/src/login/login_controller.dart';
 import 'package:app_delivery_flutter/src/utils/my_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:lottie/lottie.dart';
 
 class LoginPage extends StatefulWidget {
@@ -13,7 +15,18 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
 
-
+  LoginController _con = new LoginController();
+  //método que sobre escribe y lo primero que se ejecuta al abrir el page
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    
+    //método para iniciar controlador
+    SchedulerBinding.instance?.addPostFrameCallback((timeStamp) {
+      _con.init(context);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -104,12 +117,17 @@ class _LoginPageState extends State<LoginPage> {
           ),
         ),
         SizedBox(width: 7), //separación entre textos
-        Text(
-          'Regístrate',
-          //agregar estilos
-          style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: MyColors.primaryColor
+        //widget con evento on tap
+        GestureDetector(
+          //código que se ejecuta con click on tap
+          onTap: _con.goToRegisterPage,
+          child: Text(
+            'Regístrate',
+            //agregar estilos
+            style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: MyColors.primaryColor
+            ),
           ),
         )
       ],

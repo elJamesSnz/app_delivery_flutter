@@ -1,4 +1,5 @@
 import 'package:app_delivery_flutter/src/login/login_page.dart';
+import 'package:app_delivery_flutter/src/register/register_page.dart';
 import 'package:app_delivery_flutter/src/utils/my_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -24,7 +25,10 @@ class _MyAppState extends State<MyApp> {
       initialRoute: 'login',
       //routes para mapear dónde están las pages
       routes: {
-        'login': (BuildContext context) => LoginPage()
+        //page de login
+        'login': (BuildContext context) => LoginPage(),
+        //page de registro
+        'register': (BuildContext context) => RegisterPage()
       },
       theme: ThemeData(
         colorScheme: ColorScheme.light(primary: MyColors.primaryColor),
