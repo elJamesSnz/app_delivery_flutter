@@ -1,6 +1,6 @@
 import 'dart:ffi';
 
-import 'package:app_delivery_flutter/src/login/login_controller.dart';
+import 'package:app_delivery_flutter/src/pages/login/login_controller.dart';
 import 'package:app_delivery_flutter/src/utils/my_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
