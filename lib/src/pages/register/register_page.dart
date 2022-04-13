@@ -6,7 +6,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:lottie/lottie.dart';
 
 class RegisterPage extends StatefulWidget {
-  const RegisterPage({Key? key}) : super(key: key);
+  const RegisterPage({Key key}) : super(key: key);
 
   @override
   _RegisterPageState createState() => _RegisterPageState();

@@ -15,22 +15,19 @@ class User {
   String sessionToken;
   String image;
 
-  //Método constructor
   User({
-    required this.id,
-    required this.name,
-    required this.lastname,
-    required this.email,
-    required this.phone,
-    required this.password,
-    required this.sessionToken,
-    required this.image,
+    this.id,
+    this.name,
+    this.lastname,
+    this.email,
+    this.phone,
+    this.password,
+    this.sessionToken,
+    this.image,
   });
 
-
-  //sentencia factory que recibe mapa de valores JSON
   factory User.fromJson(Map<String, dynamic> json) => User(
-    id: json["id"],
+    id: json["id"] is int ? json['id'].toString() : json["id"],
     name: json["name"],
     lastname: json["lastname"],
     email: json["email"],
@@ -40,7 +37,6 @@ class User {
     image: json["image"],
   );
 
-  //objeto a JSON
   Map<String, dynamic> toJson() => {
     "id": id,
     "name": name,
