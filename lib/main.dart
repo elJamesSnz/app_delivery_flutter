@@ -31,7 +31,7 @@ class _MyAppState extends State<MyApp> {
         'register': (BuildContext context) => RegisterPage()
       },
       theme: ThemeData(
-        colorScheme: ColorScheme.light(primary: MyColors.primaryColor),
+        colorScheme: ColorScheme.light(primary: UtilsColors.primaryColor),
         //fontFamily: 'NimbusSans'
       ),
     );
