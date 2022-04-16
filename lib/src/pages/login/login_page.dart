@@ -1,7 +1,7 @@
 import 'dart:ffi';
 
 import 'package:app_delivery_flutter/src/pages/login/login_controller.dart';
-import 'package:app_delivery_flutter/src/utils/my_colors.dart';
+import 'package:app_delivery_flutter/src/utils/utils_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:lottie/lottie.dart';
@@ -115,7 +115,7 @@ class _LoginPageState extends State<LoginPage> {
         Text(
           '¿No tienes cuenta?',
           style: TextStyle(
-              color: MyColors.primaryColor
+              color: UtilsColors.primaryColor
           ),
         ),
         SizedBox(width: 7), //separación entre textos
@@ -128,7 +128,7 @@ class _LoginPageState extends State<LoginPage> {
             //agregar estilos
             style: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: MyColors.primaryColor
+                color: UtilsColors.primaryColor
             ),
           ),
         )
@@ -150,7 +150,7 @@ class _LoginPageState extends State<LoginPage> {
           //estilos al botón
           style: ElevatedButton.styleFrom(
             //cambiar color al botón
-            primary: MyColors.primaryColor,
+            primary: UtilsColors.primaryColor,
             //modificar la forma del botón
             shape: RoundedRectangleBorder(
               //número de pixeles
@@ -171,7 +171,7 @@ class _LoginPageState extends State<LoginPage> {
       //agregar decoraciones al container como color, forma, etc
       decoration: BoxDecoration(
         //color del box
-        color: MyColors.primaryOpacityColor,
+        color: UtilsColors.primaryOpacityColor,
         //radio del box
         borderRadius: BorderRadius.circular(30),
 
@@ -189,11 +189,11 @@ class _LoginPageState extends State<LoginPage> {
             //agregamos espacio para que no esté pegado al borde
             contentPadding: EdgeInsets.all(15),
             hintStyle: TextStyle(
-                color: MyColors.primaryColorDark
+                color: UtilsColors.primaryColorDark
             ),
             prefixIcon: Icon(
               Icons.email,
-              color: MyColors.primaryColor,
+              color: UtilsColors.primaryColor,
             )
         ),
       ),
@@ -207,7 +207,7 @@ class _LoginPageState extends State<LoginPage> {
       //agregar decoraciones al container como color, forma, etc
       decoration: BoxDecoration(
         //color del box
-        color: MyColors.primaryOpacityColor,
+        color: UtilsColors.primaryOpacityColor,
         //radio del box
         borderRadius: BorderRadius.circular(30),
 
@@ -224,11 +224,11 @@ class _LoginPageState extends State<LoginPage> {
             //agregamos espacio para que no esté pegado al borde
             contentPadding: EdgeInsets.all(15),
             hintStyle: TextStyle(
-                color: MyColors.primaryColorDark
+                color: UtilsColors.primaryColorDark
             ),
             prefixIcon: Icon(
               Icons.lock,
-              color: MyColors.primaryColor,
+              color: UtilsColors.primaryColor,
             )
         ),
       ),
@@ -241,7 +241,7 @@ class _LoginPageState extends State<LoginPage> {
       height: 230,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(100),
-        color: MyColors.primaryColor
+        color: UtilsColors.primaryColor
       ),
     );
   }

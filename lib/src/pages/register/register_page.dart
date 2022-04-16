@@ -1,6 +1,6 @@
 
 import 'package:app_delivery_flutter/src/pages/register/register_controller.dart';
-import 'package:app_delivery_flutter/src/utils/my_colors.dart';
+import 'package:app_delivery_flutter/src/utils/utils_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:lottie/lottie.dart';
@@ -90,7 +90,7 @@ class _RegisterPageState extends State<RegisterPage> {
       //establecer radio imagen
       radius: 60,
       //establecer color de fondo
-      backgroundColor: MyColors.primaryBackgroundColor,
+      backgroundColor: UtilsColors.primaryBackgroundColor,
     );
   }
 
@@ -133,7 +133,7 @@ class _RegisterPageState extends State<RegisterPage> {
         //estilos al botón
         style: ElevatedButton.styleFrom(
           //cambiar color al botón
-            primary: MyColors.primaryColor,
+            primary: UtilsColors.primaryColor,
             //modificar la forma del botón
             shape: RoundedRectangleBorder(
               //número de pixeles
@@ -154,7 +154,7 @@ class _RegisterPageState extends State<RegisterPage> {
       //agregar decoraciones al container como color, forma, etc
       decoration: BoxDecoration(
         //color del box
-        color: MyColors.primaryOpacityColor,
+        color: UtilsColors.primaryOpacityColor,
         //radio del box
         borderRadius: BorderRadius.circular(30),
 
@@ -171,11 +171,11 @@ class _RegisterPageState extends State<RegisterPage> {
             //agregamos espacio para que no esté pegado al borde
             contentPadding: EdgeInsets.all(15),
             hintStyle: TextStyle(
-                color: MyColors.primaryColorDark
+                color: UtilsColors.primaryColorDark
             ),
             prefixIcon: Icon(
               Icons.email,
-              color: MyColors.primaryColor,
+              color: UtilsColors.primaryColor,
             )
         ),
       ),
@@ -190,7 +190,7 @@ class _RegisterPageState extends State<RegisterPage> {
       //agregar decoraciones al container como color, forma, etc
       decoration: BoxDecoration(
         //color del box
-        color: MyColors.primaryOpacityColor,
+        color: UtilsColors.primaryOpacityColor,
         //radio del box
         borderRadius: BorderRadius.circular(30),
 
@@ -206,11 +206,11 @@ class _RegisterPageState extends State<RegisterPage> {
             //agregamos espacio para que no esté pegado al borde
             contentPadding: EdgeInsets.all(15),
             hintStyle: TextStyle(
-                color: MyColors.primaryColorDark
+                color: UtilsColors.primaryColorDark
             ),
             prefixIcon: Icon(
               Icons.person,
-              color: MyColors.primaryColor,
+              color: UtilsColors.primaryColor,
             )
         ),
       ),
@@ -225,7 +225,7 @@ class _RegisterPageState extends State<RegisterPage> {
       //agregar decoraciones al container como color, forma, etc
       decoration: BoxDecoration(
         //color del box
-        color: MyColors.primaryOpacityColor,
+        color: UtilsColors.primaryOpacityColor,
         //radio del box
         borderRadius: BorderRadius.circular(30),
 
@@ -241,11 +241,11 @@ class _RegisterPageState extends State<RegisterPage> {
             //agregamos espacio para que no esté pegado al borde
             contentPadding: EdgeInsets.all(15),
             hintStyle: TextStyle(
-                color: MyColors.primaryColorDark
+                color: UtilsColors.primaryColorDark
             ),
             prefixIcon: Icon(
               Icons.person_outline,
-              color: MyColors.primaryColor,
+              color: UtilsColors.primaryColor,
             )
         ),
       ),
@@ -260,7 +260,7 @@ class _RegisterPageState extends State<RegisterPage> {
       //agregar decoraciones al container como color, forma, etc
       decoration: BoxDecoration(
         //color del box
-        color: MyColors.primaryOpacityColor,
+        color: UtilsColors.primaryOpacityColor,
         //radio del box
         borderRadius: BorderRadius.circular(30),
 
@@ -278,11 +278,11 @@ class _RegisterPageState extends State<RegisterPage> {
             //agregamos espacio para que no esté pegado al borde
             contentPadding: EdgeInsets.all(15),
             hintStyle: TextStyle(
-                color: MyColors.primaryColorDark
+                color: UtilsColors.primaryColorDark
             ),
             prefixIcon: Icon(
               Icons.phone,
-              color: MyColors.primaryColor,
+              color: UtilsColors.primaryColor,
             )
         ),
       ),
@@ -297,7 +297,7 @@ class _RegisterPageState extends State<RegisterPage> {
       //agregar decoraciones al container como color, forma, etc
       decoration: BoxDecoration(
         //color del box
-        color: MyColors.primaryOpacityColor,
+        color: UtilsColors.primaryOpacityColor,
         //radio del box
         borderRadius: BorderRadius.circular(30),
 
@@ -315,11 +315,11 @@ class _RegisterPageState extends State<RegisterPage> {
             //agregamos espacio para que no esté pegado al borde
             contentPadding: EdgeInsets.all(15),
             hintStyle: TextStyle(
-                color: MyColors.primaryColorDark
+                color: UtilsColors.primaryColorDark
             ),
             prefixIcon: Icon(
               Icons.lock,
-              color: MyColors.primaryColor,
+              color: UtilsColors.primaryColor,
             )
         ),
       ),
@@ -334,7 +334,7 @@ class _RegisterPageState extends State<RegisterPage> {
       //agregar decoraciones al container como color, forma, etc
       decoration: BoxDecoration(
         //color del box
-        color: MyColors.primaryOpacityColor,
+        color: UtilsColors.primaryOpacityColor,
         //radio del box
         borderRadius: BorderRadius.circular(30),
 
@@ -352,11 +352,11 @@ class _RegisterPageState extends State<RegisterPage> {
             //agregamos espacio para que no esté pegado al borde
             contentPadding: EdgeInsets.all(15),
             hintStyle: TextStyle(
-                color: MyColors.primaryColorDark
+                color: UtilsColors.primaryColorDark
             ),
             prefixIcon: Icon(
               Icons.lock_outline,
-              color: MyColors.primaryColor,
+              color: UtilsColors.primaryColor,
             )
         ),
       ),
@@ -370,7 +370,7 @@ class _RegisterPageState extends State<RegisterPage> {
       height: 230,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(100),
-          color: MyColors.primaryColor
+          color: UtilsColors.primaryColor
       ),
     );
   }

@@ -15,29 +15,32 @@ class ResponseApi {
 
   //Método constructor
   ResponseApi({
-    this.message,
-    this.error,
     this.success,
+    this.message,
+    this.error
   });
 
 
 
   //sentencia factory que recibe mapa de valores JSON
-  ResponseApi.fromJson(Map<String, dynamic> json){
+  ResponseApi.fromJson(Map<String, dynamic> json) {
 
     message = json["message"];
-    error =  json["error"];
-    success =  json["success"];
-    try{
+    error = json["error"];
+    success = json["success"];
+
+    try {
       data = json['data'];
-    }catch(e){
+    } catch(e) {
       print('Exception data $e');
     }
+
   }
 
   Map<String, dynamic> toJson() => {
-    "message": message,
-    "error": error,
     "success": success,
+    "message": message,
+    "error": error
+
   };
 }
