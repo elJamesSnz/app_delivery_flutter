@@ -20,7 +20,20 @@ class LoginController{
   Future init(BuildContext context) async{
     this.context = context;
     await usersProvider.init(context);
+    //se lee si hay llave user, en await
+    //si no hay nada se manda nulo
+    User user = User.fromJson(await _sharedpref.read('user') ?? {});
+
+    //Se agrega ? porque user puede ser nulo porque no hay información por parte del sahredpreference
+    //el ? evita un null.sessiontoken != null
+    if(user?.sessionToken != null){
+    //  Navigator.pushNamedAndRemoveUntil(context, 'client/products/list', (route) => false);
+      print('${user.toJson()}');
+    }
+    
   }
+
+  
 
   //método para hacer cambio de page a través de un controlador
   void goToRegisterPage(){
