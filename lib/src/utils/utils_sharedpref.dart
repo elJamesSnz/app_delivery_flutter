@@ -26,4 +26,11 @@ class UtilsSharedpref{
     final prefs = await SharedPreferences.getInstance();
     return prefs.remove(key);
   }
+
+  void logout(BuildContext context) async{
+    //borramos el key user para cerrar sesión
+    await remove('user');
+    //eliminar historial de pantallas
+    Navigator.pushNamedAndRemoveUntil(context, 'login', (route) => false);
+  }
 }
