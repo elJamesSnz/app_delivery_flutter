@@ -56,14 +56,22 @@ class LoginController{
         if(responseApi.success){
           User user = User.fromJson(responseApi.data);
           _sharedpref.save('user', user.toJson());
-          //pushNamedAndRemoveUntil -> quita historial de todas las pantallas y es la principal
-          Navigator.pushNamedAndRemoveUntil(context, 'client/products/list', (route) => false);
 
+          print('USER. ${user.toJson()}');
+
+          //verificar si tiene más de un rol el usuario para enviarle a la pantalla roles
+          if(user.roles.length > 1){
+            Navigator.pushNamedAndRemoveUntil(context, 'roles', (route) => false);
+          }
+          else{
+            //pushNamedAndRemoveUntil -> quita historial de todas las pantallas y es la principal
+            //se redirecciona a la ruta que tenga almacenada en la db si solo es una
+            Navigator.pushNamedAndRemoveUntil(context, user.roles[0].route, (route) => false);
+          }
         }
         else{
           UtilsSnackbar.show(context, responseApi.message);
         }
-
     }
 
   }

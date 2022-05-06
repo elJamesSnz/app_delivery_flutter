@@ -98,7 +98,7 @@ class _RegisterPageState extends State<RegisterPage> {
   Widget _iconBack(){
     return IconButton(
       //método al presionar
-        onPressed: (){},
+        onPressed: _con.back,
         //se recupera ícono
         icon: Icon(Icons.arrow_back_ios, color: Colors.white)
     );

@@ -1,6 +1,9 @@
 import 'package:app_delivery_flutter/src/pages/client/products/list/client_products_list_page.dart';
+import 'package:app_delivery_flutter/src/pages/commerce/orders/list/commerce_orders_list_page.dart';
+import 'package:app_delivery_flutter/src/pages/delivery/orders/list/delivery_orders_list_page.dart';
 import 'package:app_delivery_flutter/src/pages/login/login_page.dart';
 import 'package:app_delivery_flutter/src/pages/register/register_page.dart';
+import 'package:app_delivery_flutter/src/pages/roles/roles_page.dart';
 import 'package:app_delivery_flutter/src/utils/utils_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -30,8 +33,14 @@ class _MyAppState extends State<MyApp> {
         'login': (BuildContext context) => LoginPage(),
         //page de registro
         'register': (BuildContext context) => RegisterPage(),
+        //ruta de roles
+        'roles': (BuildContext context) => RolesPage(),
         //page de lista de productos
-        'client/products/list': (BuildContext context) => ClientProductsListPage()
+        'client/products/list': (BuildContext context) => ClientProductsListPage(),
+        //page lista de órdenes commerce
+        'commerce/orders/list': (BuildContext context) => CommerceOrdersListPage(),
+        //página lista de órdenes delivery
+        'delivery/orders/list': (BuildContext context) => DeliveryOrdersListPage()
       },
       theme: ThemeData(
         colorScheme: ColorScheme.light(primary: UtilsColors.primaryColor),

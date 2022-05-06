@@ -66,10 +66,24 @@ class RegisterController{
       UtilsSnackbar.show(context, "Error al crear el usuario\nSi el problema persiste, contacte a servicio.");
     }
     else{
+
+      //Si la respuesta es correcta, se agrega una función future para redirigir al login.
+      //LA función tiene un delay de 2s
+      if(responseApi.success){
+        Future.delayed(Duration(seconds: 2), () {
+          Navigator.pushReplacementNamed(context, 'login');
+        });
+      }
+
       print('RESPUESTA ${responseApi?.toJson()}');
       UtilsSnackbar.show(context, responseApi.message);
     }
 
-
   }
+
+  void back(){
+    //recibe un contexto, para regresar a la pantalla anterior
+    Navigator.pop(context);
+  }
+
 }
