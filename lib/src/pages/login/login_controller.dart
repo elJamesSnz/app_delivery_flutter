@@ -27,8 +27,15 @@ class LoginController{
     //Se agrega ? porque user puede ser nulo porque no hay información por parte del sahredpreference
     //el ? evita un null.sessiontoken != null
     if(user?.sessionToken != null){
-    //  Navigator.pushNamedAndRemoveUntil(context, 'client/products/list', (route) => false);
-      print('${user.toJson()}');
+      //verificar si tiene más de un rol el usuario para enviarle a la pantalla roles
+      if(user.roles.length > 1){
+        Navigator.pushNamedAndRemoveUntil(context, 'roles', (route) => false);
+      }
+      else{
+        //pushNamedAndRemoveUntil -> quita historial de todas las pantallas y es la principal
+        //se redirecciona a la ruta que tenga almacenada en la db si solo es una
+        Navigator.pushNamedAndRemoveUntil(context, user.roles[0].route, (route) => false);
+      }
     }
     
   }

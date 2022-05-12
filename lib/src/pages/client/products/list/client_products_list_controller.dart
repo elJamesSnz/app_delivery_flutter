@@ -1,10 +1,12 @@
 import 'package:app_delivery_flutter/src/utils/utils_sharedpref.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class ClientProductsListController{
   BuildContext context;
   UtilsSharedpref _sharedPref = new UtilsSharedpref();
+  GlobalKey<ScaffoldState> key = new GlobalKey<ScaffoldState>();
 
   //se hace un buildconetxt y le pasamos el contexto de la aplicación
   Future init(BuildContext context){
@@ -14,5 +16,9 @@ class ClientProductsListController{
   void logout(){
     //se envía la petición de logput con el contexto de la app
     _sharedPref.logout(context);
+  }
+
+  void openDrawer(){
+    key.currentState.openDrawer();
   }
 }
